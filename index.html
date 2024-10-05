@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelian Ikan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pembelian Ikan</h1>
+        <form id="pembelian-form">
+            <label for="namaPembeli">Nama Pembeli:</label>
+            <input type="text" id="namaPembeli" name="namaPembeli" required>
+
+            <h2>Jenis Ikan</h2>
+            <div class="ikan-list">
+                <div class="ikan">
+                    <label for="kkpPrem">
+                        <input type="checkbox" id="kkpPrem" name="ikan[]" value="kkpPrem">
+                        KKP Prem (Rp63.000/kg)
+                    </label>
+                    <input type="number" id="kkpPremJumlah" name="kkpPremJumlah" min="1" value="0">
+                </div>
+                <div class="ikan">
+                    <label for="tgr">
+                        <input type="checkbox" id="tgr" name="ikan[]" value="tgr">
+                        TGR (Rp100.000/kg)
+                    </label>
+                    <input type="number" id="tgrJumlah" name="tgrJumlah" min="1" value="0">
+                </div>
+                <div class="Gula">
+                    <label for="Batok">
+                        <input type="checkbox" id="Gula" name="Batok[]" value="Gula">
+                        Gula (Rp31.000/buah)
+                    </label>
+                    <input type="number" id="stdJumlah" name="stdJumlah" min="1" value="0">
+                </div>
+                <div class="ikan">
+                    <label for="kulit">
+                        <input type="checkbox" id="kulit" name="ikan[]" value="kulit">
+                        Kulit (Rp30.000/kg)
+                    </label>
+                    <input type="number" id="kulitJumlah" name="kulitJumlah" min="1" value="0">
+                </div>
+            </div>
+
+            <button type="submit">Hitung Total</button>
+        </form>
+
+        <div id="total-output"></div>
+
+        <div id="pembayaran-info">
+            <h3>Informasi Pembayaran</h3>
+            <p>Transfer hanya ke rekening BCA Evi Herlina: 8692035924</p>
+            <p>Harap konfirmasi pembayaran dengan mengirimkan bukti transfer.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
